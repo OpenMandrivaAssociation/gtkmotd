@@ -1,5 +1,5 @@
 %define version 0.5
-%define release 9mdk
+%define release  %mkrel 9
 %define name gtkmotd
 
 Summary: 	Message of the day display
