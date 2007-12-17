@@ -27,18 +27,16 @@ rm -rf $RPM_BUILD_ROOT
 %install
 %makeinstall
 
-(cd $RPM_BUILD_ROOT
-mkdir -p .%{_menudir}
-cat > .%{_menudir}/%{name} <<EOF
-?package(%{name}):\
-command="/usr/bin/gtkmotd"\
-title="Gtkmotd"\
-longtitle="Gtk version of motd"\
-needs="x11"\
-icon="other_configuration.png"\
-section="System/Configuration/Other"
+mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications/
+cat << EOF > %buildroot%{_datadir}/applications/mandriva-%{name}.desktop
+[Desktop Entry]
+Type=Application <<EOF
+Exec=/usr/bin/gtkmotd
+Name=Gtkmotd
+Comment=Gtk version of motd
+Icon=other_configuration
+Categories=Settings;
 EOF
-)
  
 %post
 %{update_menus}
@@ -53,5 +51,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr (-,root,root)
 %doc AUTHORS CHANGELOG COPYING README TODO
 %{_bindir}/gtkmotd
-%{_menudir}/*
+%{_datadir}/applications/mandriva-*.desktop
 
