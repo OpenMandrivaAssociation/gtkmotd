@@ -10,6 +10,7 @@ License: 	GPL
 URL: 		http://rhlx01.rz.fht-esslingen.de/gtkmotd/
 Group: 		Toys
 Source: 	%{name}-%{version}.tar.bz2
+BuildRoot: 	%{_tmppath}/%{name}-buildroot
 BuildRequires:	libgtk+-devel
 
 %description
