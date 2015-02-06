@@ -1,5 +1,5 @@
 %define version 0.5
-%define release  %mkrel 13
+%define release  14
 %define name gtkmotd
 
 Summary: 	Message of the day display
