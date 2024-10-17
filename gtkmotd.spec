@@ -3,7 +3,7 @@ Name: 		gtkmotd
 Version: 	0.5
 Release: 	15
 License: 	GPL
-URL: 		http://rhlx01.rz.fht-esslingen.de/gtkmotd/
+URL: 		https://rhlx01.rz.fht-esslingen.de/gtkmotd/
 Group: 		Toys
 Source: 	%{name}-%{version}.tar.bz2
 BuildRequires:	libgtk+-devel
